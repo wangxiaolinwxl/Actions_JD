@@ -6,7 +6,7 @@ name: 京东养猪猪
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 6-18/6 * * *'
+    - cron: '12 * * * *'
   watch:
     types: started
   repository_dispatch:
