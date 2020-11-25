@@ -10,7 +10,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: jd_necklace
+    types: jd_small_home
 jobs:
   build:
 
