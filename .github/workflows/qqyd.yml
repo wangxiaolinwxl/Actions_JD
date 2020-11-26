@@ -29,6 +29,7 @@ jobs:
               run: |
                   node onlyOneExecute.js
               env:
+                  COOKIE_QQYD: ${{ secrets.COOKIE_QQYD }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   BARK_SOUND: ${{ secrets.BARK_SOUND }}
