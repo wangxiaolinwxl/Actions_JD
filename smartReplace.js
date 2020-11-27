@@ -23,7 +23,7 @@ async function replaceWithSecrets(content, Secrets) {
             replacements.push({ key: "sy.getdata(cookieKey)", value: JSON.stringify(Secrets.COOKIE_ELM) });
         }
         if (Secrets.JD_COOKIE && content.indexOf("京东赚赚") > 0) {           
-            replacements.push({ key: '$.getdata("jdzz_token1")', value: JSON.stringify(Secrets.JD_TOKEN });            
+            replacements.push({ key: '$.getdata("jdzz_token1")', value: JSON.stringify(Secrets.JD_TOKEN) });            
         }
         if (Secrets.COOKIE_QQYD) {
             replacements.push({ key: "$.getdata(qqreadurlKey)", value: JSON.stringify(Secrets.COOKIE_QQYD.split("\n")[0]) });
