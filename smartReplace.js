@@ -22,9 +22,9 @@ async function replaceWithSecrets(content, Secrets) {
         if (Secrets.COOKIE_ELM) {
             replacements.push({ key: "sy.getdata(cookieKey)", value: JSON.stringify(Secrets.COOKIE_ELM) });
         }
-        if (Secrets.JD_COOKIE && content.indexOf("京东赚赚") > 0) {
-            replacements.push({ key: ', $.getdata("jdzz_token2") || "";', value: "" });
-            replacements.push({ key: '$.getdata("jdzz_token1")', value: JSON.stringify(Secrets.JD_TOKEN) });
+        if (Secrets.JD_COOKIE && content.indexOf("京东赚赚") > 0) {           
+            replacements.push({ key: '$.getdata("jdzz_token1")', value: JSON.stringify(Secrets.JD_TOKEN.split("\n")[0])) });
+            replacements.push({ key: '$.getdata("jdzz_token2")', value: JSON.stringify(Secrets.JD_TOKEN.split("\n")[1]) });
         }
         if (Secrets.COOKIE_QQYD) {
             replacements.push({ key: "$.getdata(qqreadurlKey)", value: JSON.stringify(Secrets.COOKIE_QQYD.split("\n")[0]) });
