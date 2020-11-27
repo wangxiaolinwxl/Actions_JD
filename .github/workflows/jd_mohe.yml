@@ -10,7 +10,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: joy_reward
+    types: jd_mohe
 jobs:
   build:
 
@@ -20,7 +20,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: lion-goose/Scripts-JD
+          repository: lxk0301/jd_scripts
+          source_branch: master
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
