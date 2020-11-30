@@ -1,4 +1,14 @@
 const $ = new Env("互助码");
+const notify = $.isNode() ? require('../sendNotify') : '';
+
+const Secrets = {
+    PUSH_KEY: process.env.PUSH_KEY, //server酱推送消息
+    BARK_PUSH: process.env.BARK_PUSH, //Bark推送
+    TG_BOT_TOKEN: process.env.TG_BOT_TOKEN, //TGBot推送Token
+    TG_USER_ID: process.env.TG_USER_ID, //TGBot推送成员ID
+};
+
+
 const shareCodes = [
   {
     zd: $.getdata("zd_shareCode1") || "mlrdw3aw26j3xtt5lzwi5c4dbdr2cw7ydcgse3i",
