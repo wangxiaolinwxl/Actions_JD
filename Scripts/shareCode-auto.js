@@ -124,7 +124,7 @@ function showMsg() {
   if ($.result.includes("success") {
       await notify.sendNotify(`${$.name}` + `${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}`, "提交成功");
       console.log(content)
-  if ($.result.includes("existed") {
+  } if ($.result.includes("existed") {
       await notify.sendNotify(`${$.name}` + `${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}`, "助力码已存在");
       console.log(content)
   } else {
