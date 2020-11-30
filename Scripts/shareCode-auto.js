@@ -1,3 +1,8 @@
+const exec = require('child_process').execSync
+const fs = require('fs')
+const download = require('download')
+const smartReplace = require("../smartReplace");
+
 const $ = new Env("互助码");
 const notify = $.isNode() ? require('../sendNotify') : '';
 
