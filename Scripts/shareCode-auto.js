@@ -1,19 +1,4 @@
-const exec = require('child_process').execSync
-const fs = require('fs')
-const download = require('download')
-const smartReplace = require("../smartReplace");
-
 const $ = new Env("互助码");
-const notify = $.isNode() ? require('../sendNotify') : '';
-
-const Secrets = {
-    PUSH_KEY: process.env.PUSH_KEY, //server酱推送消息
-    BARK_PUSH: process.env.BARK_PUSH, //Bark推送
-    TG_BOT_TOKEN: process.env.TG_BOT_TOKEN, //TGBot推送Token
-    TG_USER_ID: process.env.TG_USER_ID, //TGBot推送成员ID
-};
-
-
 const shareCodes = [
   {
     zd: $.getdata("zd_shareCode1") || "mlrdw3aw26j3xtt5lzwi5c4dbdr2cw7ydcgse3i",
@@ -119,19 +104,8 @@ function checkWhetherNeedAgain(resp, fun, url, name) {
 function showMsg() {
   return new Promise((resolve) => {
     $.msg($.name, "", $.result.join("\n"));
-      if ($.result.includes("success") {
-          await notify.sendNotify(`${$.name}` + `${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}`, "提交成功");
-          console.log(content)
-      } if ($.result.includes("existed") {
-          await notify.sendNotify(`${$.name}` + `${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}`, "助力码已存在");
-          console.log(content)
-      } else {
-          await notify.sendNotify(`${$.name}` + `${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}`, "提交失败");
-          console.log(content)
-      }
     resolve();
   });
-    
 }
 
 // prettier-ignore
