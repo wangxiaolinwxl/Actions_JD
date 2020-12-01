@@ -3,7 +3,7 @@ const fs = require('fs')
 const download = require('download')
 const smartReplace = require("../smartReplace");
 
-const $ = new Env('企鹅阅读');
+const $ = new Env('京喜金牌厂长');
 const notify = $.isNode() ? require('../sendNotify') : '';
 // 公共变量
 
@@ -17,7 +17,7 @@ const Secrets = {
 
 //下载脚本
 async function downFile() {
-    const url = 'https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js'
+    const url = 'https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_story.js'
     await download(url, './', { filename: "temp.js" })
     console.log("下载代码完毕");
 }
