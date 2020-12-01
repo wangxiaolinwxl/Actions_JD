@@ -28,7 +28,7 @@ jobs:
           npm install
           npm install got download tough-cookie
       - name: ' 运行 【京喜金牌厂长】'
-        if: env.COOKIE_QQYD
+        if: env.JD_COOKIE
         run: |
           node Scripts/jx_story.js
         env:
