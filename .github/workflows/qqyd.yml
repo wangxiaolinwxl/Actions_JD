@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        COOKIE_QQYD1: ${{ secrets.COOKIE_QQYD }}
+        COOKIE_QQYD: ${{ secrets.COOKIE_QQYD }}
         COOKIE_QQYD2: ${{ secrets.COOKIE_QQYD2 }}
         COOKIE_QQYD3: ${{ secrets.COOKIE_QQYD3 }}
         COOKIE_QQYD4: ${{ secrets.COOKIE_QQYD4 }}
