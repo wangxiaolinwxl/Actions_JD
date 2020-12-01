@@ -8,7 +8,7 @@ const notify = $.isNode() ? require('../sendNotify') : '';
 // 公共变量
 
 const Secrets = {
-    COOKIE_QQYD: process.env.COOKIE_QQYD,
+    JD_COOKIE: process.env. JD_COOKIE,
     PUSH_KEY: process.env.PUSH_KEY, //server酱推送消息
     BARK_PUSH: process.env.BARK_PUSH, //Bark推送
     TG_BOT_TOKEN: process.env.TG_BOT_TOKEN, //TGBot推送Token
