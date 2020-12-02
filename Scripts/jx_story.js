@@ -9,7 +9,7 @@ author：whyour
 const $ = new Env('金牌厂长');
 main();
 async function main() {
-  $.http.get({url: `https://purge.jsdelivr.net/gh/whyour/hundun/master/quanx/jx_story.js`}).then((resp) => {
+  $.http.get({url: `https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_story.js`}).then((resp) => {
     if (resp.statusCode === 200) {
       console.log(`${$.name}CDN缓存刷新成功`)
     }
