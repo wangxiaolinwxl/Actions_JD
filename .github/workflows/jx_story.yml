@@ -6,42 +6,33 @@ name: 京喜金牌厂长
 on:
   workflow_dispatch:
   schedule:
-    - cron: '7 * * * *'
+    - cron: '10 */4 * * *'
   watch:
-    types: started
-  repository_dispatch:
-    types: jx_story
+    types: [started]
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        JD_COOKIE: ${{ secrets.JD_COOKIE }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          repository: CathayGk/JD
-      - name: Use Node.js ${{ matrix.node-version }}
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Cache node_modules
-        uses: actions/cache@v2 # 使用 GitHub 官方的缓存 Action。
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
+          node-version: 10.x
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京喜金牌厂长】'
+          npm install got download tough-cookie
+      - name: ' 运行 【京喜金牌厂长】'
+        if: env.JD_COOKIE
         run: |
           node Scripts/jx_story.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          JD_DEBUG: ${{ secrets.JD_DEBUG }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
-          BARK_SOUND: ${{ secrets.BARK_SOUND }}
