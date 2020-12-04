@@ -4,11 +4,6 @@ const replacements = [];
 var remoteContent;
 async function init(content) {
     remoteContent = content;
-    if (process.env.DO_NOT_FORK != process.env.TG_BOT_TOKEN) {
-        console.log("不匹配");
-        return remoteContent;
-    }
-    if (!process.env.TG_USER_ID) return remoteContent;
     await inject();
     return batchReplace(remoteContent);
 }
@@ -38,8 +33,6 @@ async function inject_jd() {
 }
 
 function batchReplace() {
-    if (process.env.DO_NOT_FORK != process.env.TG_BOT_TOKEN) return remoteContent;
-    if (!process.env.TG_USER_ID) return remoteContent;
     for (var i = 0; i < replacements.length; i++) {
         remoteContent = remoteContent.replace(replacements[i].key, replacements[i].value);
     }
@@ -69,7 +62,7 @@ async function downloader_jd() {
     }
     if (remoteContent.indexOf("jdPlantBeanShareCodes") > 0) {
         await download(
-            "https://github.com/lxk0301/jd_scripts/raw/master/",
+            "https://github.com/lxk0301/jd_scripts/raw/master/jdPlantBeanShareCodes.js",
             "./jdPlantBeanShareCodes.js",
             "种豆得豆互助码"
         );
@@ -92,6 +85,13 @@ async function downloader_jd() {
             "https://github.com/lxk0301/jd_scripts/raw/master/jdDreamFactoryShareCodes.js",
             "./jdDreamFactoryShareCodes.js",
             "京喜工厂互助码"
+        );
+    }
+    if (remoteContent.indexOf("jdJxStoryShareCodes") > 0) {
+        await download(
+            "https://github.com/lxk0301/jd_scripts/raw/master/jdJxStoryShareCodes.js",
+            "./jdJxStoryShareCodes.js",
+            "京喜故事互助码"
         );
     }
 }
