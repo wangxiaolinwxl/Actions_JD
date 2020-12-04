@@ -18,8 +18,9 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
-        run: |
-          git clone https://gitee.com/lxk0301/jd_scripts.git ~/jd_scripts
+        uses: actions/checkout@v2
+        with:
+          repository: lion-goose/Scripts-JD
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -33,11 +34,9 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: npm install
         run: |
-          cd ~/jd_scripts
           npm install
-      - name: '运行 【京小超】'
+      - name: '运行 【东东超市】'
         run: |
-          cd ~/jd_scripts
           node jd_superMarket.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -51,4 +50,6 @@ jobs:
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
           SUPERMARKET_UPGRADE: ${{ secrets.SUPERMARKET_UPGRADE }}
-          SUPERMARKET_LOTTERY: ${{ secrets.SUPERMARKET_LOTTERY }}
+          jdBusinessCircleJump: ${{ secrets.BUSINESS_CIRCLE_JUMP }}
+          SUPERMARKET_SHARECODES: ${{ secrets.SUPERMARKET_SHARECODES }}
+          jdSuperMarketLottery: ${{ secrets.SUPERMARKET_LOTTERY }}
