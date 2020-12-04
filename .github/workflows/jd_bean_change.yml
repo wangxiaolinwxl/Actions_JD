@@ -6,7 +6,7 @@ name: jd_bean_change
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 2 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -18,9 +18,8 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          repository: lion-goose/Scripts-JD
+        run: |
+          git clone https://gitee.com/lxk0301/jd_scripts.git ~/jd_scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -34,9 +33,11 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: npm install
         run: |
+          cd ~/jd_scripts
           npm install
       - name: '运行 【京豆变动通知】'
         run: |
+          cd ~/jd_scripts
           node jd_bean_change.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -49,4 +50,3 @@ jobs:
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
-          JD_818_SHAREID_NOTIFY: ${{ secrets.JD_818_SHAREID_NOTIFY }}
