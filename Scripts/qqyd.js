@@ -3,8 +3,8 @@ const fs = require('fs')
 const download = require('download')
 const smartReplace = require("./smartReplace");
 
-const $ = new Env('企鹅阅读');
-//const notify = $.isNode() ? require('./sendNotify') : '';
+const $ = new Env('企鹅读书');
+const notify = $.isNode() ? require('./sendNotify') : '';
 // 公共变量
 
 const Secrets = {
