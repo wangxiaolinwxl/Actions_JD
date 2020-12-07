@@ -23,10 +23,9 @@ async function replaceWithSecrets(content, Secrets) {
             replacements.push({ key: "sy.getdata(cookieKey)", value: JSON.stringify(Secrets.COOKIE_ELM) });
         }        
         if (Secrets.COOKIE_QQYD) {
-            replacements.push({ key: "$.getdata(qqreadurlKey)", value: JSON.stringify(Secrets.COOKIE_QQYD.split("\n")[0]) });
-            replacements.push({ key: "$.getdata(qqreadheaderKey)", value: JSON.stringify(Secrets.COOKIE_QQYD.split("\n")[1]) });
-            replacements.push({ key: "$.getdata(qqreadtimeurlKey)", value: JSON.stringify(Secrets.COOKIE_QQYD.split("\n")[2]) });
-            replacements.push({ key: "$.getdata(qqreadtimeheaderKey)", value: JSON.stringify(Secrets.COOKIE_QQYD.split("\n")[3]) });
+            replacements.push({ key: "$.getdata(qqreadbd)", value: JSON.stringify(Secrets.COOKIE_QQYD.split("&")[0]) });
+            replacements.push({ key: "$.getdata(qqreadtimeurl)", value: JSON.stringify(Secrets.COOKIE_QQYD.split("&")[1]) });
+            replacements.push({ key: "$.getdata(qqreadtimehd)", value: JSON.stringify(Secrets.COOKIE_QQYD.split("&")[2]) });            
         }
         await downloader(content);//检查所需额外js
     /*
