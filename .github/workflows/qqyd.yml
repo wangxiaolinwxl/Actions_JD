@@ -6,7 +6,7 @@ name: 企鹅阅读
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/11 * * * *'
+    - cron: '*/11 1-23 * * *'
   watch:
     types: [started]
 
@@ -17,9 +17,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         COOKIE_QQYD: ${{ secrets.COOKIE_QQYD }}
-        COOKIE_QQYD2: ${{ secrets.COOKIE_QQYD2 }}
-        COOKIE_QQYD3: ${{ secrets.COOKIE_QQYD3 }}
-        COOKIE_QQYD4: ${{ secrets.COOKIE_QQYD4 }}
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 10.x
@@ -30,40 +27,12 @@ jobs:
         run: |
           npm install
           npm install got download tough-cookie
-      - name: ' 运行 【企鹅阅读一】'
+      - name: ' 运行 【企鹅阅读】'
         if: env.COOKIE_QQYD
         run: |
           node Scripts/qqyd.js
         env:
           COOKIE_QQYD: ${{ secrets.COOKIE_QQYD }}
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-      - name: ' 运行 【企鹅阅读二】'
-        if: env.COOKIE_QQYD2
-        run: |
-          node Scripts/qqyd.js
-        env:
-          COOKIE_QQYD: ${{ secrets.COOKIE_QQYD2 }}
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-      - name: ' 运行 【企鹅阅读三】'
-        if: env.COOKIE_QQYD3
-        run: |
-          node Scripts/qqyd.js
-        env:
-          COOKIE_QQYD: ${{ secrets.COOKIE_QQYD3 }}
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
-      - name: ' 运行 【企鹅阅读四】'
-        if: env.COOKIE_QQYD4
-        run: |
-          node Scripts/qqyd.js
-        env:
-          COOKIE_QQYD: ${{ secrets.COOKIE_QQYD4 }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
