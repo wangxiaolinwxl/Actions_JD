@@ -22,6 +22,9 @@
     "tough-cookie": "^4.0.0",
     "download": "^8.0.0",
     "request": "^2.88.2",
-    "tunnel": "0.0.6"
+    "axios": "0.20.0",
+    "tunnel": "0.0.6",
+    "request-promise": "^4.2.5",
+    "node-schedule": "^1.3.2"
   }
 }

@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: jd_dreamFactory
+name: jd_ms_redrain
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '20 * * * *'
+    - cron: '45 16 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: jd_dreamFactory
+    types: jd_ms_redrain
 jobs:
   build:
 
@@ -35,9 +35,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东京喜工厂】'
+      - name: '运行 【秒杀红包雨】'
         run: |
-          node jd_dreamFactory.js
+          node jd_ms_redrain.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
@@ -48,4 +48,4 @@ jobs:
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
-          DREAM_FACTORY_SHARE_CODES: ${{ secrets. DREAM_FACTORY_SHARE_CODES }}  
+          IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
