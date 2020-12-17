@@ -1,15 +1,13 @@
 /*
 自用于github action
 author：whyour
-京东排行榜
-更新时间：2020-12-02 6:07
-脚本说明：京喜金牌厂长
+脚本说明：京喜工厂
 
  */
-const $ = new Env('金牌厂长');
+const $ = new Env('京喜工厂');
 main();
 async function main() {
-  $.http.get({url: `https://purge.jsdelivr.net/gh/whyour/hundun/master/quanx/jx_story.js`}).then((resp) => {
+  $.http.get({url: `https://purge.jsdelivr.net/gh/whyour/hundun/master/quanx/jx_factory.js`}).then((resp) => {
     if (resp.statusCode === 200) {
       console.log(`${$.name}CDN缓存刷新成功`)
     }
@@ -20,7 +18,7 @@ async function main() {
     eval($.body);
   }
 }
-function updateShareCodes(url = 'https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_story.js') {
+function updateShareCodes(url = 'https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory.js') {
   return new Promise(resolve => {
     $.get({url}, async (err, resp, data) => {
       try {
@@ -37,7 +35,7 @@ function updateShareCodes(url = 'https://raw.githubusercontent.com/whyour/hundun
     })
   })
 }
-function scriptsCDN(url = 'https://cdn.jsdelivr.net/gh/whyour/hundun/master/quanx/jx_story.js') {
+function scriptsCDN(url = 'https://cdn.jsdelivr.net/gh/whyour/hundun/master/quanx/jx_factory.js') {
   return new Promise(resolve => {
     $.get({url}, async (err, resp, data) => {
       try {
