@@ -6,7 +6,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzNDAwMDAwMDAzMzQxMDMyMQ==",
     ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5m9cZ2Wq2HgbnThhhzT5E-s",
     jxgc: $.getdata("jx_shareCode1") || "Nh_PvkjTg0H3s__zplSH8Q==",
-    jazz: $.getdata("jx_zzCode1") || "AUWE5mv-VyWQAXGL4jnQYxA",
+    jxzz: $.getdata("jx_zzCode1") || "AUWE5mv-VyWQAXGL4jnQYxA",
   },
   {
     zd: $.getdata("zd_shareCode2") || "4npkonnsy7xi2a2r32czno6wavxbplvojqd36qq",
@@ -14,7 +14,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode2") || "MTE1NDQ5OTIwMDAwMDAwMzUxMjY4ODE=",
     ddgc: $.getdata("dd_shareCode2") || "P04z54XCjVWnYaS5m9cZ2f92n9MwceBotXn8M0",
     jxgc: $.getdata("jx_shareCode2") || "5QvMcO3KsijU5FD2dHDB5w==",
-    jazz: $.getdata("jx_zzCode2") || "AUWE5mKiXzjNcXmX5jyobkg",
+    jxzz: $.getdata("jx_zzCode2") || "AUWE5mKiXzjNcXmX5jyobkg",
   },
   {
     zd: $.getdata("zd_shareCode2") || "mlrdw3aw26j3xba2f6ihf37vt4tw7qbo7xhyz6a",
@@ -22,7 +22,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode2") || "MTE1NDAxNzcwMDAwMDAwMzc5Mzc1NjU=",
     ddgc: $.getdata("dd_shareCode2") || "P04z54XCjVWnYaS5m9cZ2X81ShOlZIq-p6vuU0",
     jxgc: $.getdata("jx_shareCode2") || "enniaeI1wakw7ugsLiPO_w==",
-    jazz: $.getdata("jx_zzCode3") || "AUWE5mqmYmTEIXjaqi3kYwA",
+    jxzz: $.getdata("jx_zzCode3") || "AUWE5mqmYmTEIXjaqi3kYwA",
   },
 ];
 $.result = [];
