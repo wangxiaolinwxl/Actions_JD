@@ -6,7 +6,7 @@ name: jd_jdzz
 on:
   workflow_dispatch:
   schedule:
-    - cron: '18 16 * * *'
+    - cron: '1 16 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -40,6 +40,7 @@ jobs:
           node jd_jdzz.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JDZZ_SHARECODES: ${{ secrets.JDZZ_SHARECODES }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
