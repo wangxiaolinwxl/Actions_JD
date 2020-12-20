@@ -65,7 +65,7 @@ $.random = Math.floor(Math.random() * 60);
     await $.wait($.random);
     jxzz &&
       (await create(
-        `https://code.chiang.fun/api/v1/jd/jdzz/create/${jxgc}/`,
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/${jxzz}/`,
         "京喜赚赚" 
       ));
   }
