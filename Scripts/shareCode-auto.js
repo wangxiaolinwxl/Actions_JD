@@ -32,7 +32,7 @@ const shareCodes = [
     nc: $.getdata("nc_shareCode4") || "9edd7af87c3b462890ee729aefcf28b5",
     mc: $.getdata("mc_shareCode4") || "MTE1NDUyMjEwMDAwMDAwNDMxMDg3NzU=",
     ddgc: $.getdata("dd_shareCode4") || "T0225KkcRhocpADXckumkfYOIACjVWnYaS5kRrbA",
-    jxgc: $.getdata("jx_shareCode4") || "enniaeI1wakw7ugsLiPO_w==",
+    jxgc: $.getdata("jx_shareCode4") || "8WXKX6WCbzzjiQt2YPW3mw==",
     jxzz: $.getdata("jx_zzshareCode4") || "AUWE5mqmYmTEIXjaqi3kYwA",
     crazyjoy: $.getdata("jd_joyshareCode4") || "MMuK0SVCG8IPahInNAv8mKt9zd5YaBeE",
   },
