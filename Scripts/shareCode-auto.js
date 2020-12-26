@@ -27,6 +27,15 @@ const shareCodes = [
     jxzz: $.getdata("jx_zzshareCode3") || "AUWE5mqmYmTEIXjaqi3kYwA",
     crazyjoy: $.getdata("jd_joyshareCode3") || "vwz-tTaUDHiRRTRNcLmPLqt9zd5YaBeE",
   },
+  {
+    zd: $.getdata("zd_shareCode4") || "mlrdw3aw26j3xba2f6ihf37vt4tw7qbo7xhyz6a",
+    nc: $.getdata("nc_shareCode4") || "8dd28949aef2453bba94269e02537e9c",
+    mc: $.getdata("mc_shareCode4") || "MTE1NDAxNzcwMDAwMDAwMzc5Mzc1NjU=",
+    ddgc: $.getdata("dd_shareCode4") || "P04z54XCjVWnYaS5m9cZ2X81ShOlZIq-p6vuU0",
+    jxgc: $.getdata("jx_shareCode4") || "enniaeI1wakw7ugsLiPO_w==",
+    jxzz: $.getdata("jx_zzshareCode4") || "AUWE5mqmYmTEIXjaqi3kYwA",
+    crazyjoy: $.getdata("jd_joyshareCode4") || "MMuK0SVCG8IPahInNAv8mKt9zd5YaBeE",
+  },
 ];
 $.result = [];
 $.random = Math.floor(Math.random() * 60);
