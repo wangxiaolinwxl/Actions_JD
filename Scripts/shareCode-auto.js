@@ -28,7 +28,7 @@ const shareCodes = [
     crazyjoy: $.getdata("jd_joyshareCode3") || "vwz-tTaUDHiRRTRNcLmPLqt9zd5YaBeE",
   },
   {
-    zd: $.getdata("zd_shareCode4") || "mlrdw3aw26j3xba2f6ihf37vt4tw7qbo7xhyz6a",
+    zd: $.getdata("zd_shareCode4") || "olmijoxgmjutya43cjelwtqcacxr5u3jch2tixi",
     nc: $.getdata("nc_shareCode4") || "8dd28949aef2453bba94269e02537e9c",
     mc: $.getdata("mc_shareCode4") || "MTE1NDAxNzcwMDAwMDAwMzc5Mzc1NjU=",
     ddgc: $.getdata("dd_shareCode4") || "P04z54XCjVWnYaS5m9cZ2X81ShOlZIq-p6vuU0",
