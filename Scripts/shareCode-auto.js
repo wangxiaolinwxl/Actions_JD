@@ -31,7 +31,7 @@ const shareCodes = [
     zd: $.getdata("zd_shareCode4") || "olmijoxgmjutya43cjelwtqcacxr5u3jch2tixi",
     nc: $.getdata("nc_shareCode4") || "9edd7af87c3b462890ee729aefcf28b5",
     mc: $.getdata("mc_shareCode4") || "MTE1NDUyMjEwMDAwMDAwNDMxMDg3NzU=",
-    ddgc: $.getdata("dd_shareCode4") || "P04z54XCjVWnYaS5m9cZ2X81ShOlZIq-p6vuU0",
+    ddgc: $.getdata("dd_shareCode4") || "T0225KkcRhocpADXckumkfYOIACjVWnYaS5kRrbA",
     jxgc: $.getdata("jx_shareCode4") || "enniaeI1wakw7ugsLiPO_w==",
     jxzz: $.getdata("jx_zzshareCode4") || "AUWE5mqmYmTEIXjaqi3kYwA",
     crazyjoy: $.getdata("jd_joyshareCode4") || "MMuK0SVCG8IPahInNAv8mKt9zd5YaBeE",
