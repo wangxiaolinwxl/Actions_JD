@@ -205,7 +205,7 @@ async function downloader_jd() {
             "京喜工厂互助码"
         );
     }
-    if (remoteContent.indexOf("new Env('京喜农场'||'京喜财富岛')") > 0) {
+    if (remoteContent.indexOf("new Env('京喜农场')"||"new Env('京喜财富岛')") > 0) {
         await download(
             "https://github.com/lion-goose/Scripts-JD/raw/master/jdJxncTokens.js",
             "./jdJxncTokens.js",
