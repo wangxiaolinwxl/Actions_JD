@@ -8,6 +8,7 @@ const shareCodes = [
     jxgc: $.getdata("jx_shareCode1") || "Nh_PvkjTg0H3s__zplSH8Q==",
     jxzz: $.getdata("jx_zzshareCode1") || "AUWE5mv-VyWQAXGL4jnQYxA",
     crazyjoy: $.getdata("jd_joyshareCode1") || "Kx01YlyYNXQaIMcVbk5AtKt9zd5YaBeE",
+    cash: $.getdata("jd_cash_shareCode1") || "eU9Yab63Yq0upWzVmHtBhw",
   },
   {
     zd: $.getdata("zd_shareCode2") || "4npkonnsy7xi2a2r32czno6wavxbplvojqd36qq",
@@ -17,6 +18,7 @@ const shareCodes = [
     jxgc: $.getdata("jx_shareCode2") || "5QvMcO3KsijU5FD2dHDB5w==",
     jxzz: $.getdata("jx_zzshareCode2") || "AUWE5mKiXzjNcXmX5jyobkg",
     crazyjoy: $.getdata("jd_joyshareCode2") || "9H4T1ehNfCa0EdxJYyaHcKt9zd5YaBeE",
+    cash: $.getdata("jd_cash_shareCode2") || "eU9Ya-m1Zfpyp2vUmSVC0Q",
   },
   {
     zd: $.getdata("zd_shareCode3") || "mlrdw3aw26j3xba2f6ihf37vt4tw7qbo7xhyz6a",
@@ -26,6 +28,7 @@ const shareCodes = [
     jxgc: $.getdata("jx_shareCode3") || "enniaeI1wakw7ugsLiPO_w==",
     jxzz: $.getdata("jx_zzshareCode3") || "AUWE5mqmYmTEIXjaqi3kYwA",
     crazyjoy: $.getdata("jd_joyshareCode3") || "vwz-tTaUDHiRRTRNcLmPLqt9zd5YaBeE",
+    cash: $.getdata("jd_cash_shareCode3") || "eU9Yaei6MvgmpziHnXZBgw",
   },
   {
     zd: $.getdata("zd_shareCode4") || "olmijoxgmjutya43cjelwtqcacxr5u3jch2tixi",
@@ -35,6 +38,7 @@ const shareCodes = [
     jxgc: $.getdata("jx_shareCode4") || "8WXKX6WCbzzjiQt2YPW3mw==",
     jxzz: $.getdata("jx_zzshareCode4") || "S5KkcRhocpADXckumkfYOIA",
     crazyjoy: $.getdata("jd_joyshareCode4") || "MMuK0SVCG8IPahInNAv8mKt9zd5YaBeE",
+    cash: $.getdata("jd_cash_shareCode4") || "eU9Yaui3N6gmoz-HznIXgg",
   },
 ];
 $.result = [];
@@ -43,7 +47,7 @@ $.random = Math.floor(Math.random() * 60);
 !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
-    const { zd, nc, mc, ddgc, jxgc, jxzz, crazyjoy } = shareCodes[i];
+    const { zd, nc, mc, ddgc, jxgc, jxzz, crazyjoy, cash } = shareCodes[i];
     await $.wait($.random);
     zd &&
       (await create(
@@ -86,6 +90,12 @@ $.random = Math.floor(Math.random() * 60);
         `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${crazyjoy}/`,
         "疯狂的joy"
       ));
+    await $.wait($.random);
+    cash &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdcash/create/${cash}/`,
+        "签到领现金"
+      ));    
   }
   await showMsg();
 })()
