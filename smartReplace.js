@@ -163,7 +163,7 @@ function batchReplace() {
 
 async function downloader_jd() {
     if (/require\(['"`]{1}.\/jdCookie.js['"`]{1}\)/.test(remoteContent))
-        await download("https://github.com/lion-goose/Actions_JD/raw/main/jdCookie.js", "./jdCookie.js", "京东Cookies");
+        await download("https://github.com/lion-goose/Actions_JD/raw/main/Scripts/jdCookie.js", "./jdCookie.js", "京东Cookies");
     if (remoteContent.indexOf("jdFruitShareCodes") > 0) {
         await download(
             "https://github.com/lion-goose/Scripts-JD/raw/master/jdFruitShareCodes.js",
@@ -203,6 +203,13 @@ async function downloader_jd() {
             "https://github.com/lion-goose/Scripts-JD/raw/master/jdDreamFactoryShareCodes.js",
             "./jdDreamFactoryShareCodes.js",
             "京喜工厂互助码"
+        );
+    }   
+    if (remoteContent.indexOf("new Env('京喜财富岛')") > 0) {
+        await download(
+            "https://github.com/lion-goose/Scripts-JD/raw/master/jdJxncTokens.js",
+            "./jdJxncTokens.js",
+            "京喜农场Token"
         );
     }
     if (remoteContent.indexOf("new Env('京喜农场')") > 0) {
