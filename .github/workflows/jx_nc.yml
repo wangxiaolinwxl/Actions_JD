@@ -1,4 +1,4 @@
-name: 京喜农场
+name: 京喜农场-whyour
 
 on:
     workflow_dispatch:
