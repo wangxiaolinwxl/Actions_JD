@@ -32,7 +32,6 @@ echo "30 * * * * node /scripts/jd_gyec.js |ts >> /scripts/logs/jd_gyec.log 2>&1"
 echo "10 * * * * node /scripts/jd_xxl.js |ts >> /scripts/logs/jd_xxl.log 2>&1" >> /scripts/docker/merged_list_file.sh
 #小鸽有礼
 echo "5 7 * * * node /scripts/jd_xg.js |ts >> /scripts/logs/jd_xg.log 2>&1" >> /scripts/docker/merged_list_file.sh
-
 #个护消消乐
 echo "40 * * * * node /scripts/jd_xxl_gh.js |ts >> /scripts/logs/jd_xxl_gh.log 2>&1" >> /scripts/docker/merged_list_file.sh
 
