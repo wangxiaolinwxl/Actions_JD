@@ -9,6 +9,8 @@
 15 5 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
 # 宠汪汪
 5 9 * * * node /scripts/jd_joy.js >> /scripts/logs/jd_joy.log 2>&1
+# 导到所有互助码
+47 5 */2 * * node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
 # 集鞭炮赢京豆
 #10 8,21 * * * node /scripts/jd_firecrackers.js >> /scripts/logs/jd_firecrackers.log 2>&1
 
