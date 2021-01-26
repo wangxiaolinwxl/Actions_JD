@@ -33,6 +33,9 @@
 # 海产新年抽奖
 10 7 * * * node /scripts/jd_sx.js >> /scripts/logs/jd_sx.log 2>&1
 
+# 京东手机年终奖
+30 9 * * * node /scripts/jd_festival.js >> /scripts/logs/jd_festival.log 2>&1
+
 # 京年团圆pick
 5 0 19,20 1 * node /scripts/jd_vote.js >> /scripts/logs/jd_vote.log 2>&1
 
