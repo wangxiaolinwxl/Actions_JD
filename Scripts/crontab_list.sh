@@ -57,7 +57,7 @@
 5 0 19,20 1 * node /scripts/jd_vote.js >> /scripts/logs/jd_vote.log 2>&1
 
 # 京东粉丝专享
-10 0 * * * node /scripts/jd_wechat_sign.js >> /scripts/logs/jd_wechat_sign.log 2>&1
+# 10 0 * * * node /scripts/jd_wechat_sign.js >> /scripts/logs/jd_wechat_sign.log 2>&1
 
 # 小鸽有礼
 5 7 * * * node /scripts/jd_xg.js >> /scripts/logs/jd_xg.log 2>&1
