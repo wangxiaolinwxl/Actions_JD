@@ -1,7 +1,7 @@
 #!/bin/sh
 #@shylocks仓库脚本
 function initShylocks() {
-    git clone https://github.com/shylocks/Loon.git /shylocks
+    git clone https://github.com/lion-goose/BackUp.git /shylocks
     npm install
 }
 
