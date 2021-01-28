@@ -2,7 +2,6 @@
 #@shylocks仓库脚本
 function initShylocks() {
     git clone https://github.com/lion-goose/BackUp.git /lion-goose
-    npm install
 }
 
  if [ ! -d "/lion-goose/" ]; then
