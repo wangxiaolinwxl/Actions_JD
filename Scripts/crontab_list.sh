@@ -50,9 +50,6 @@
 # 京东粉丝专享
 # 10 0 * * * node /scripts/jd_wechat_sign.js >> /scripts/logs/jd_wechat_sign.log 2>&1
 
-# 小鸽有礼
-5 7 * * * node /scripts/jd_xg.js >> /scripts/logs/jd_xg.log 2>&1
-
 # # 东东爱消除
 # 0 * * * * node /scripts/jd_xxl.js >> /scripts/logs/jd_xxl.log 2>&1
 
