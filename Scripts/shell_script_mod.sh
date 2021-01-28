@@ -1,22 +1,22 @@
 #!/bin/sh
 #@shylocks仓库脚本
 function initShylocks() {
-    git clone https://github.com/shylocks/Loon.git /shylocks
+    git clone https://github.com/lion-goose/BackUp.git /lion-goose
     npm install
 }
 
- if [ ! -d "/shylocks/" ]; then
-    echo "未检查到shylocks仓库脚本，初始化下载相关脚本"
+ if [ ! -d "/lion-goose/" ]; then
+    echo "未检查到lion-goose仓库脚本，初始化下载相关脚本"
     initShylocks
 else
-    echo "更新shylocks脚本相关文件"
-    git -C /shylocks reset --hard
-    git -C /shylocks pull --rebase
+    echo "更新lion-goose脚本相关文件"
+    git -C /lion-goose reset --hard
+    git -C /lion-goose pull --rebase
     npm install --loglevel error
 fi
 
 ##复制两个文件
-cp -f /shylocks/jd*.js /scripts/
+cp -f /lion-goose/jd*.js /scripts/
 
 # ##使用自定义shell下载并配置执行盲盒抽京豆
 # echo "10 8,9,10 * * * node /scripts/jd_mh.js |ts >> /scripts/logs/jd_mh.log 2>&1" >> /scripts/docker/merged_list_file.sh
