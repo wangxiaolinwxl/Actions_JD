@@ -17,12 +17,6 @@
 # 宝洁美发屋
 1 8,9 14-31/1 1 * node /scripts/jd_bj.js >> /scripts/logs/jd_bj.log 2>&1
 
-# 源头好物红包
-0 0 * * *  node /scripts/jd_coupon.js >> /scripts/logs/jd_coupon.log 2>&1
-
-# 京东手机年终奖
-30 9 * * * node /scripts/jd_festival.js >> /scripts/logs/jd_festival.log 2>&1
-
 # # 工业品爱消除
 # 20 * * * * node /scripts/jd_gyec.js >> /scripts/logs/jd_gyec.log 2>&1
 
@@ -41,11 +35,8 @@
 # 官方号直播红包雨
 0 0,9,11,13,15,17,19,20,21,22,23 * * * node /scripts/jd_live_redrain_offical.js >> /scripts/logs/jd_live_redrain_offical.log 2>&1
 
-# 盲盒抽京豆
-1 7 * * * node /scripts/jd_mh.js >> /scripts/logs/jd_mh.log 2>&1
-
-# 京东秒秒币
-10 7 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
+# 神券驾到
+1 7 13 1 * node /scripts/jd_super_coupon.js >> /scripts/logs/jd_super_coupon.log 2>&1
 
 # 超级直播间任务赢京豆
 40 21 * * * node /scripts/jd_super.js >> /scripts/logs/jd_super.log 2>&1
