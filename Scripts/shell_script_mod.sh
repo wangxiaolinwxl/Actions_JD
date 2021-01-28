@@ -12,7 +12,7 @@ else
     echo "更新lion-goose脚本相关文件"
     git -C /lion-goose reset --hard
     git -C /lion-goose pull --rebase
-    npm install --loglevel error
+    #npm install --loglevel error
 fi
 
 ##复制两个文件
