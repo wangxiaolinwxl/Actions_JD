@@ -11,8 +11,6 @@
 5 9 * * * node /scripts/jd_joy.js >> /scripts/logs/jd_joy.log 2>&1
 # 导到所有互助码
 47 5 */2 * * node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
-# 5G狂欢城
-0 0,6,12,18 * * * node /scripts/jd_5g.js >> /scripts/logs/jd_5g.log 2>&1
 
 
 # 宝洁美发屋
