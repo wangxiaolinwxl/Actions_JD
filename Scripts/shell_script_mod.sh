@@ -2,7 +2,6 @@
 #@shylocks仓库脚本
 function initShylocks() {
     git clone https://github.com/lion-goose/BackUp.git /lion-goose
-    npm install
 }
 
  if [ ! -d "/lion-goose/" ]; then
@@ -12,35 +11,34 @@ else
     echo "更新lion-goose脚本相关文件"
     git -C /lion-goose reset --hard
     git -C /lion-goose pull --rebase
-    npm install --loglevel error
+    #npm install --loglevel error
 fi
 
 ##复制两个文件
 cp -f /lion-goose/jd*.js /scripts/
 
-# ##使用自定义shell下载并配置执行盲盒抽京豆
-# echo "10 8,9,10 * * * node /scripts/jd_mh.js |ts >> /scripts/logs/jd_mh.log 2>&1" >> /scripts/docker/merged_list_file.sh
-# ##使用自定义shell下载并配置执行宝洁美发屋
-# echo "1 8,9 14-31/1 1 * node /scripts/jd_bj.js |ts >> /scripts/logs/jd_bj.log 2>&1" >> /scripts/docker/merged_list_file.sh
-# ##使用自定义shell下载并配置执行京东秒秒币
-# echo "1 7 * * * node /scripts/jd_ms.js |ts >> /scripts/logs/jd_ms.log 2>&1" >> /scripts/docker/merged_list_file.sh
-# #神券京豆
-# echo "1 7 13 1 * node /scripts/jd_super_coupon.js |ts >> /scripts/logs/jd_super_coupon.log 2>&1" >> /scripts/docker/merged_list_file.sh
-# #工业爱消除
-# #echo "30 * * * * node /scripts/jd_gyec.js |ts >> /scripts/logs/jd_gyec.log 2>&1" >> /scripts/docker/merged_list_file.sh
-# #东东爱消除
-# #echo "10 * * * * node /scripts/jd_xxl.js |ts >> /scripts/logs/jd_xxl.log 2>&1" >> /scripts/docker/merged_list_file.sh
-# #小鸽有礼
-# echo "5 7 * * * node /scripts/jd_xg.js |ts >> /scripts/logs/jd_xg.log 2>&1" >> /scripts/docker/merged_list_file.sh
-#个护消消乐
-#echo "40 * * * * node /scripts/jd_xxl_gh.js |ts >> /scripts/logs/jd_xxl_gh.log 2>&1" >> /scripts/docker/merged_list_file.sh
 
-# #临时增加红包雨
-#echo "58,59 18-20/1 * * * git -C /shylocks reset --hard && git -C /shylocks pull --rebase" >> /scripts/docker/merged_list_file.sh
-#echo "0,1 19-21/1 * * * node /scripts/jd_live_redrain2.js |ts >> /scripts/logs/jd_live_redrain2.log 2>&1" >> /scripts/docker/merged_list_file.sh
-#echo "30,31 20-23/1 19 1 * node /scripts/jd_live_redrain.js |ts >> /scripts/logs/jd_live_redrain.log 2>&1" >> /scripts/docker/merged_list_file.sh
+# #使用自定义shell下载并配置超级直播间红包雨
+# wget -O /scripts/jd_live_redrain.js https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_live_redrain.js
+# echo -e >> /scripts/docker/merged_list_file.sh
+# echo "29,30,31,32,33 20-23/1 28 1 * node /scripts/jd_live_redrain.js |ts >> /scripts/logs/jd_live_redrain.log 2>&1" >> /scripts/docker/merged_list_file.sh
 
-##使用自定义shell下载并配置执行美妆
-#wget -O /scripts/jd_mh.js https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh.js
-#echo -e >> /scripts/docker/merged_list_file.sh
-#echo "10 8,9,10 * * * node /scripts/jd_mh.js |ts >> /scripts/logs/jd_mh.log 2>&1" >> /scripts/docker/merged_list_file.sh
+# #使用自定义shell下载并配置执行直播间红包雨
+# wget -O /scripts/jd_live_redrain2.js https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_live_redrain2.js
+# echo -e >> /scripts/docker/merged_list_file.sh
+# echo "59,0,1,2,3,4,5 19-21/1 * * * node /scripts/jd_live_redrain2.js |ts >> /scripts/logs/jjd_live_redrain2.log 2>&1" >> /scripts/docker/merged_list_file.sh
+
+# #使用自定义shell下载并配置半点红包雨
+# wget -O /scripts/jd_live_redrain_half.js https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_live_redrain_half.js
+# echo -e >> /scripts/docker/merged_list_file.sh
+# echo "29,30,31,32,33 12-23/1 * * * node /scripts/jd_live_redrain_half.js |ts >> /scripts/logs/jd_live_redrain_half.log 2>&1" >> /scripts/docker/merged_list_file.sh
+
+# #使用自定义shell下载并配置执行年货直播红包雨
+# wget -O /scripts/jd_live_redrain_nian.js https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_live_redrain_nian.js
+# echo -e >> /scripts/docker/merged_list_file.sh
+# echo "59,0,1,2,3,4,5 0,9,11,13,15,17,19,20,21,23 3,5,20-30/1 1,2 * node /scripts/jd_live_redrain_nian.js |ts >> /scripts/logs/jd_live_redrain_nian.log 2>&1" >> /scripts/docker/merged_list_file.sh
+
+# #使用自定义shell下载并配置执行官方号直播红包雨
+# wget -O /scripts/jd_live_redrain_offical.js https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_live_redrain_offical.js
+# echo -e >> /scripts/docker/merged_list_file.sh
+# echo "59,0,1,2,3,4,5 0,9,11,13,15,17,19,20,21,22,23 * * * node /scripts/jd_live_redrain_offical.js |ts >> /scripts/logs/jd_live_redrain_offical.log 2>&1" >> /scripts/docker/merged_list_file.sh
