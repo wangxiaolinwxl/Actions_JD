@@ -13,5 +13,5 @@ jobs:
               env:
                   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
               with:
-                  source-repo: "git@github.com:luoyunchong/lin-cms-dotnetcore.git"
-                  destination-repo: "git@gitee.com:igeekfan/lin-cms-dotnetcore.git"
+                  source-repo: "git@gitee.com:lxk0301/jd_scripts.git"
+                  destination-repo: "git@github.com:lion-goose/JD_Scripts.git"
