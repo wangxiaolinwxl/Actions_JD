@@ -11,7 +11,9 @@
 15 6,12,18 * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2> &1
 # 美丽研究院
 51 6,13,18 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_beauty.log 2>&1
-# 导到所有互助码
+# 签到领现金
+10 7 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
+# 导出所有互助码
 47 5 */2 * * node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
 
 
