@@ -8,7 +8,9 @@
 # 宠汪汪
 5 9 * * * node /scripts/jd_joy.js >> /scripts/logs/jd_joy.log 2>&1
 # 京喜工厂
-15 6,12,18 * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1
+15 6,12,18 * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2> &1
+# 美丽研究院
+51 6,13,18 * * * node /scripts/jd_beauty.js >> /scripts/logs/jd_ jd_beauty.log 2>&1
 # 导到所有互助码
 47 5 */2 * * node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
 
