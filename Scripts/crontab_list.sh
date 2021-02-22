@@ -1,5 +1,5 @@
 # 每3天的23:50分清理一次日志
-50 23 */3 * * rm -rf /scripts/logs/*.log
+50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecode' | xargs rm -rf
 
 # crazyJoy自动每日任务
 10 8,12 * * * node /scripts/jd_crazy_joy.js >> /scripts/logs/jd_crazy_joy.log 2>&1
