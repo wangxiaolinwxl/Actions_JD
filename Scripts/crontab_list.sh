@@ -1,5 +1,5 @@
 # 每3天的23:50分清理一次日志
-50 23 */3 * * rm -rf /scripts/logs/*.log
+50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecode' | xargs rm -rf
 
 # crazyJoy自动每日任务
 10 8,12 * * * node /scripts/jd_crazy_joy.js >> /scripts/logs/jd_crazy_joy.log 2>&1
@@ -7,12 +7,17 @@
 15 5 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
 # 宠汪汪
 5 9 * * * node /scripts/jd_joy.js >> /scripts/logs/jd_joy.log 2>&1
+# 京喜工厂
+15 6,12,18 * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1
 # 导到所有互助码
 47 5 */2 * * node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
 
 
 # 宝洁美发屋
 1 8,9 14-31/1 1 * node /scripts/jd_bj.js >> /scripts/logs/jd_bj.log 2>&1
+
+# 华硕爱奇艺
+1 0 22-28 2 * node /scripts/jd_iqiyi.js >> /scripts/logs/jd_iqiyi.js.log 2>&1
 
 # # 工业品爱消除
 # 20 * * * * node /scripts/jd_gyec.js >> /scripts/logs/jd_gyec.log 2>&1
@@ -22,9 +27,6 @@
 
 # 超级直播间任务赢京豆
 40 21 * * * node /scripts/jd_super.js >> /scripts/logs/jd_super.log 2>&1
-
-# 海产新年抽奖
-10 7 * * * node /scripts/jd_sx.js >> /scripts/logs/jd_sx.log 2>&1
 
 # 京年团圆pick
 5 0 19,20 1 * node /scripts/jd_vote.js >> /scripts/logs/jd_vote.log 2>&1
