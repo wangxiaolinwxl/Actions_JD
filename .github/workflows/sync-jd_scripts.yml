@@ -32,7 +32,7 @@ jobs:
         directory: master
         github_token: ${{ secrets.PAT }}
         branch: master
-        repository: "https://github.com/lion-goose/JD_Scripts.git"
+        repository: "lion-goose/JD_Scripts"
 
     - name: Clone Main
       run: |
@@ -43,4 +43,4 @@ jobs:
         directory: main
         github_token: ${{ secrets.PAT }}
         branch: main
-        repository: "https://github.com/lion-goose/JD_Scripts.git"
+        repository: "lion-goose/JD_Scripts"
