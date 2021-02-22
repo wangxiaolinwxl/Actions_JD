@@ -16,6 +16,9 @@
 # 宝洁美发屋
 1 8,9 14-31/1 1 * node /scripts/jd_bj.js >> /scripts/logs/jd_bj.log 2>&1
 
+# 华硕爱奇艺
+1 0 22-28 2 * node /scripts/jd_iqiyi.js >> /scripts/logs/jd_iqiyi.js.log 2>&1
+
 # # 工业品爱消除
 # 20 * * * * node /scripts/jd_gyec.js >> /scripts/logs/jd_gyec.log 2>&1
 
