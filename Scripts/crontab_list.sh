@@ -7,6 +7,8 @@
 15 5 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
 # 宠汪汪
 5 9 * * * node /scripts/jd_joy.js >> /scripts/logs/jd_joy.log 2>&1
+# 东东超市
+22 */6 * * * node /scripts/jd_superMarket.js >> /scripts/logs/jd_superMarket.log 2>&1
 # 京喜工厂
 15 6,12,18 * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2> &1
 # 美丽研究院
